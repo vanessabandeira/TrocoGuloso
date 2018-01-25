@@ -11,7 +11,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = FXMLLoader.load(this.getClass().getResource("Main.fxml"));
+			BorderPane root = FXMLLoader.load(this.getClass().getResource("TrocoGuloso.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();
