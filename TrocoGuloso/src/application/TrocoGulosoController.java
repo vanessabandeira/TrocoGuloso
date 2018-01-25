@@ -23,7 +23,7 @@ public class TrocoGulosoController {
 	private Button btnCalcular;
 	
 	@FXML
-	public void procuraTroco(ActionEvent event) {
+	void procuraTroco(ActionEvent event) {
 		if (Double.parseDouble(Pagamento.getText()) < Double.parseDouble(conta.getText())) {
 			res.setText("\nPagamento insuficiente, faltam R$"+ String.format("%.2f", Double.parseDouble(conta.getText()) - Double.parseDouble(Pagamento.getText())));
 		}else {
