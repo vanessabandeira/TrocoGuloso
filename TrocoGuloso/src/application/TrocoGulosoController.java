@@ -1,5 +1,7 @@
 package application;
 
+
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,15 +21,16 @@ public class TrocoGulosoController {
 
 	@FXML
 	private Button btnCalcular;
-
+	
 	@FXML
-	void procuraTroco(ActionEvent event) {
+	public void procuraTroco(ActionEvent event) {
 		if (Double.parseDouble(Pagamento.getText()) < Double.parseDouble(conta.getText())) {
 			res.setText("\nPagamento insuficiente, faltam R$"+ String.format("%.2f", Double.parseDouble(conta.getText()) - Double.parseDouble(Pagamento.getText())));
 		}else {
+			
 			int nota[] = {100, 50, 20, 10, 5, 2, 1};
 			int centavos[] = {50, 25, 10, 5, 1};
-
+			
 			String result;
 			double troco;
 			int i, vlr, ct;
