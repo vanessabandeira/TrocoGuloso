@@ -40,12 +40,12 @@ public class TrocoGulosoController {
 			i = 0;
 			
 			while (vlr != 0) {
-				ct = vlr / nota[i]; // calculando a qtde de notas
+				ct = vlr / nota[i]; 
 				if (ct != 0) {
 					result = result + (ct +"nota(s) de R$"+ nota[i] +"\n");
-					vlr = vlr % nota[i]; // sobra
+					vlr = vlr % nota[i]; 
 				}
-				i = i + 1; // pr�xima nota
+				i = i + 1; 
 			}
 
 			result = result +"\n";
@@ -53,13 +53,13 @@ public class TrocoGulosoController {
 			vlr = (int)Math.round((troco - (int)troco) * 100);
 			i = 0;
 			while (vlr != 0) {
-				ct = vlr / centavos[i]; // calculando a qtde de moedas
+				ct = vlr / centavos[i]; 
 				if (ct != 0) {
 					result = result + (ct +"moeda(s) de"+ centavos[i] +
 							"centavo(s)\n");
-					vlr = vlr % centavos[i]; // sobra
+					vlr = vlr % centavos[i]; 
 				}
-				i = i + 1; // pr�ximo centavo
+				i = i + 1; 
 			}
 			this.res.setText(result);
 		}
