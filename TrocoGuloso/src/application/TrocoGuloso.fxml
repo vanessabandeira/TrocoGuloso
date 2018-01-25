@@ -6,11 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TrocoGulosoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TrocoGulosoController">
    <bottom>
-      <AnchorPane prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="385.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="res" layoutX="14.0" layoutY="14.0" />
          </children>
@@ -19,9 +20,22 @@
    <top>
       <AnchorPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="conta" layoutX="126.0" layoutY="22.0" promptText="Conta" />
-            <TextField fx:id="Pagamento" layoutX="126.0" layoutY="63.0" promptText="Pagamento" />
-            <Button fx:id="btnCalcular" layoutX="334.0" layoutY="111.0" mnemonicParsing="false" onAction="#procuraTroco" text="Calcular" />
+            <TextField fx:id="conta" layoutX="126.0" layoutY="22.0" />
+            <TextField fx:id="Pagamento" layoutX="126.0" layoutY="63.0" />
+            <Button fx:id="btnCalcular" layoutX="297.0" layoutY="117.0" mnemonicParsing="false" onAction="#procuraTroco" text="Troco Minimo">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Text fill="#7c0909" layoutX="39.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pagamento" wrappingWidth="84.74609375">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#7c0909" layoutX="56.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conta" wrappingWidth="51.74609375">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </top>
