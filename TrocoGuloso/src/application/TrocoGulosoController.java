@@ -28,7 +28,8 @@ public class TrocoGulosoController {
 			res.setText("\nPagamento insuficiente, faltam R$"+ String.format("%.2f", Double.parseDouble(conta.getText()) - Double.parseDouble(Pagamento.getText())));
 		}else {
 			
-			int nota[] = {100, 50, 20, 10, 5, 2, 1};
+			int nota[] = {200,100,40,20,10,4,2};
+			//int nota[] = {100, 50, 20, 10, 5, 2, 1};
 			int centavos[] = {50, 25, 10, 5, 1};
 			
 			String result;
@@ -45,7 +46,7 @@ public class TrocoGulosoController {
 			while (vlr != 0) {
 				ct = vlr / nota[i]; 
 				if (ct != 0) {
-					result = result + (ct +"nota(s) de R$"+ nota[i] +"\n");
+					result = result + (ct +" nota(s) de R$"+ nota[i] +"\n");
 					vlr = vlr % nota[i]; 
 				}
 				i = i + 1; 
@@ -58,7 +59,7 @@ public class TrocoGulosoController {
 			while (vlr != 0) {
 				ct = vlr / centavos[i]; 
 				if (ct != 0) {
-					result = result + (ct +"moeda(s) de"+ centavos[i] +
+					result = result + (ct +" moeda(s) de"+ centavos[i] +
 							"centavo(s)\n");
 					vlr = vlr % centavos[i]; 
 				}
